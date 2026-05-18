@@ -4,8 +4,8 @@ import mysql.connector
 def connect_db():
     return mysql.connector.connect(
         host="localhost",
-        user="root",          # change if needed
-        password="your_password",  # change this
+        user="root",         
+        password="your_password",  
         database="EquestrianBarnDB"
     )
 
