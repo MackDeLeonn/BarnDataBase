@@ -4,9 +4,7 @@
 CREATE DATABASE EquestrianBarnDB;
 USE EquestrianBarnDB;
 
--- =========================
 -- Table: BarnOwners
--- =========================
 CREATE TABLE BarnOwners (
     OwnerID INT PRIMARY KEY AUTO_INCREMENT,
     FirstName VARCHAR(50) NOT NULL,
@@ -16,9 +14,7 @@ CREATE TABLE BarnOwners (
     BarnName VARCHAR(100) NOT NULL
 );
 
--- =========================
 -- Table: Trainers
--- =========================
 CREATE TABLE Trainers (
     TrainerID INT PRIMARY KEY AUTO_INCREMENT,
     FirstName VARCHAR(50) NOT NULL,
@@ -34,9 +30,7 @@ CREATE TABLE Trainers (
         ON UPDATE CASCADE
 );
 
--- =========================
 -- Table: Boarders
--- =========================
 CREATE TABLE Boarders (
     BoarderID INT PRIMARY KEY AUTO_INCREMENT,
     FirstName VARCHAR(50) NOT NULL,
@@ -51,9 +45,7 @@ CREATE TABLE Boarders (
         ON UPDATE CASCADE
 );
 
--- =========================
 -- Table: Horses
--- =========================
 CREATE TABLE Horses (
     HorseID INT PRIMARY KEY AUTO_INCREMENT,
     HorseName VARCHAR(50) NOT NULL,
@@ -68,9 +60,7 @@ CREATE TABLE Horses (
         ON UPDATE CASCADE
 );
 
--- =========================
 -- Table: Students
--- =========================
 CREATE TABLE Students (
     StudentID INT PRIMARY KEY AUTO_INCREMENT,
     FirstName VARCHAR(50) NOT NULL,
@@ -86,9 +76,7 @@ CREATE TABLE Students (
         ON UPDATE CASCADE
 );
 
--- =========================
 -- Table: Lessons
--- =========================
 CREATE TABLE Lessons (
     LessonID INT PRIMARY KEY AUTO_INCREMENT,
     LessonDate DATE NOT NULL,
@@ -116,9 +104,7 @@ CREATE TABLE Lessons (
         ON UPDATE CASCADE
 );
 
--- =========================
 -- Sample Data Inserts
--- =========================
 
 INSERT INTO BarnOwners (FirstName, LastName, PhoneNumber, Email, BarnName)
 VALUES
@@ -145,9 +131,7 @@ INSERT INTO Lessons (LessonDate, LessonTime, StudentID, TrainerID, HorseID, Dura
 VALUES
 ('2026-05-20', '15:00:00', 1, 1, 1, 60);
 
--- =========================
 -- Example Queries
--- =========================
 
 -- View all students and their trainers
 SELECT Students.FirstName AS StudentFirstName,
